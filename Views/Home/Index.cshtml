@@ -1,1 +1,15 @@
-﻿<p>Test</p>
+﻿@model HomeViewModel
+<div class="columns">
+    @foreach (var post in Model.Posts)
+    {
+        <div class="column">
+            <div class="card">
+                <div class="card-content">
+                    <p class="title">@post.Title</p>
+                    <p class="subtitle">@post.Subtitle</p>
+                    <div class="content">@post.Content</div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

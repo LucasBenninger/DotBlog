@@ -7,7 +7,7 @@ namespace DotBlog.Models
 {
     public class Post
     {
-        public int BlogId { get; set; }
+        public int PostId { get; set; }
         public string Title { get; set; }
         public string Subtitle { get; set; }
         public string Content { get; set; }
