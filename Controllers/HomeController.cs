@@ -21,7 +21,7 @@ namespace DotBlog.Controllers
         {
             var homeViewModel = new HomeViewModel
             {
-                Posts = postRepository.AllPosts
+                Posts = postRepository.AllPosts()
             };
             return View(homeViewModel);
         }

@@ -1,12 +1,9 @@
 ﻿@model DotBlog.Models.Post
 
-<h4>Post</h4>
+    <h1 class="title">Create A New Blog Post</h1>
 <hr />
 <form asp-action="Create">
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-    <div class="field">
-        <input asp-for="PostId" class="input" type="hidden" />
-    </div>
     <div class="field">
         <label asp-for="Title" class="label"></label>
         <input asp-for="Title" class="input" />
@@ -23,11 +20,7 @@
         <span asp-validation-for="Content" class="text-danger"></span>
     </div>
     <div class="field">
-        <input type="submit" value="Create" class="btn btn-primary" />
+        <input type="submit" value="Create" class="button is-primary" />
     </div>
 </form>
-
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
 

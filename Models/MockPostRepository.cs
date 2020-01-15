@@ -21,9 +21,34 @@ namespace DotBlog.Models
         }
         public IEnumerable<Post> TopPosts { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
-        public Post GetPostById(int postId)
+        public Post Add(Post newPost)
+        {
+            throw new NotImplementedException();
+        }
+
+        public int Commit()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Post Delete(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Post GetById(int postId)
         {
             return AllPosts.FirstOrDefault(p => p.PostId == postId);
+        }
+
+        public Post Update(Post updatedPost)
+        {
+            throw new NotImplementedException();
+        }
+
+        IEnumerable<Post> IPostRepository.AllPosts()
+        {
+            throw new NotImplementedException();
         }
     }
 }

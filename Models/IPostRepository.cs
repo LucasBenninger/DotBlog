@@ -7,8 +7,12 @@ namespace DotBlog.Models
 {
     public interface IPostRepository
     {
-        public IEnumerable<Post> AllPosts { get;}
+        IEnumerable<Post> AllPosts();
         public IEnumerable<Post> TopPosts { get; set; }
-        Post GetPostById(int postId);
+        Post GetById(int postId);
+        Post Add(Post newPost);
+        Post Update(Post updatedPost);
+        Post Delete(int id);
+        int Commit();
     }
 }
