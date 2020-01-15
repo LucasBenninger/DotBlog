@@ -1,0 +1,12 @@
+﻿@model Post
+<div class="column">
+    <div class="card">
+        <a asp-controller="Blog" asp-action="BlogPost" asp-route-id="@Model.PostId">
+            <div class="card-content">
+                <h1 class="title">@Model.Title</h1>
+                <p class="subtitle">@Model.Subtitle</p>
+                <div class="content">@Model.Content</div>
+            </div>
+        </a>
+    </div>
+</div>
