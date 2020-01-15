@@ -15,7 +15,7 @@ namespace DotBlog.Controllers
         {
             this.postRepository = postRepository;
         }
-        public IActionResult BlogPost(int id)
+        public IActionResult View(int id)
         {
             var post = postRepository.GetPostById(id);
             if (post == null)
@@ -23,6 +23,11 @@ namespace DotBlog.Controllers
                 return NotFound();
             }
             return View(post);
+        }
+
+        public IActionResult Create()
+        {
+            return View();
         }
     }
 }

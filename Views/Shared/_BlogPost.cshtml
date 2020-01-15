@@ -1,7 +1,7 @@
 ﻿@model Post
 <div class="column">
     <div class="card">
-        <a asp-controller="Blog" asp-action="BlogPost" asp-route-id="@Model.PostId">
+        <a asp-controller="Blog" asp-action="View" asp-route-id="@Model.PostId">
             <div class="card-content">
                 <h1 class="title">@Model.Title</h1>
                 <p class="subtitle">@Model.Subtitle</p>

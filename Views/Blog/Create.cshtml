@@ -1,0 +1,33 @@
+﻿@model DotBlog.Models.Post
+
+<h4>Post</h4>
+<hr />
+<form asp-action="Create">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="field">
+        <input asp-for="PostId" class="input" type="hidden" />
+    </div>
+    <div class="field">
+        <label asp-for="Title" class="label"></label>
+        <input asp-for="Title" class="input" />
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+    <div class="field">
+        <label asp-for="Subtitle" class="label"></label>
+        <input asp-for="Subtitle" class="input" />
+        <span asp-validation-for="Subtitle" class="text-danger"></span>
+    </div>
+    <div class="field">
+        <label asp-for="Content" class="label"></label>
+        <textarea  asp-for="Content" class="input" ></textarea>
+        <span asp-validation-for="Content" class="text-danger"></span>
+    </div>
+    <div class="field">
+        <input type="submit" value="Create" class="btn btn-primary" />
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
